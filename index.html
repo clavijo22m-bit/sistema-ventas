@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Inventario de Tienda</title>
-    </head>
-    <body>
-        <h1>Sistema de Inventario</h1>
-        <h2>Registro de productos</h2>
-        
-        <label>Nombre del producto:</label>
-        <input type="text">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario y registro de clientes</title>
+    <script src="clientes.js" defer></script>
+</head>
+<body>
+    <h1>Sistema de Inventario</h1>
+
+    <section aria-labelledby="registro-clientes">
+        <h2 id="registro-clientes">Registro de clientes</h2>
+        <form id="formulario-cliente">
+            <p>
+                <label for="nombre-cliente">Nombre completo:</label><br>
+                <input id="nombre-cliente" name="nombre" type="text" autocomplete="name" required>
+            </p>
+            <p>
+                <label for="documento-cliente">Documento de identidad:</label><br>
+                <input id="documento-cliente" name="documento" type="text" required>
+            </p>
+            <p>
+                <label for="correo-cliente">Correo electrónico:</label><br>
+                <input id="correo-cliente" name="correo" type="email" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="telefono-cliente">Teléfono:</label><br>
+                <input id="telefono-cliente" name="telefono" type="tel" autocomplete="tel" required>
+            </p>
+            <button type="submit">Registrar cliente</button>
+            <p id="mensaje-registro" role="status" aria-live="polite"></p>
+        </form>
+
+        <h3>Listado de clientes</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Documento</th>
+                    <th>Correo electrónico</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody id="lista-clientes"></tbody>
+        </table>
+        <p id="sin-clientes">Aún no hay clientes registrados.</p>
+    </section>
+
+    <section aria-labelledby="registro-productos">
+        <h2 id="registro-productos">Registro de productos</h2>
+        <label for="nombre-producto">Nombre del producto:</label>
+        <input id="nombre-producto" type="text">
         <br><br>
-        
-        <label>Cantidad:</label>
-        <input type="number">
+
+        <label for="cantidad-producto">Cantidad:</label>
+        <input id="cantidad-producto" type="number">
         <br><br>
-        
-        <button>Registrar producto</button>
+
+        <button type="button">Registrar producto</button>
         <h2>Listado de productos</h2>
         <table border="1">
-            <tr>
-                <th>Producto</th>
-                <th>Cantidad</th>
-            </tr>
-            
-            <tr>
-                <td>Computador</td>
-                <td>10</td>
-            </tr>
-            
-            <tr>
-                <td>Mouse</td>
-                <td>20</td>
-            </tr>
-        
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Computador</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Mouse</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
         </table>
-    </body>
+    </section>
+</body>
 </html>
