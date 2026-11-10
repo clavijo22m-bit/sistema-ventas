@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
     <meta charset="UTF-8">
@@ -80,3 +82,120 @@
     </section>
 </body>
 </html>
+=======
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administra y consulta los productos de tu inventario.">
+    <title>Inventario | Panel de control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Inventario, inicio">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3.75 7.5 12 3l8.25 4.5v9L12 21l-8.25-4.5v-9Z" />
+                        <path d="m3.9 7.6 8.1 4.5 8.1-4.5M12 12.2V21M8 5.2l8.2 4.6" />
+                    </svg>
+                </span>
+                <span>stock<span class="brand-accent">room</span></span>
+            </a>
+            <span class="topbar-label"><span class="online-dot"></span> Panel de control</span>
+        </header>
+
+        <section class="intro" aria-labelledby="page-title">
+            <div class="intro-copy">
+                <p class="eyebrow">GESTIÓN DE INVENTARIO</p>
+                <h1 id="page-title">Todo en orden.<br><span>Todo bajo control.</span></h1>
+                <p class="intro-description">Registra tus productos y mantén tu inventario siempre al día.</p>
+            </div>
+            <div class="intro-art" aria-hidden="true">
+                <div class="art-orbit orbit-one"></div>
+                <div class="art-orbit orbit-two"></div>
+                <div class="art-box box-back"></div>
+                <div class="art-box box-front"><span></span></div>
+                <div class="art-spark spark-one">✳</div>
+                <div class="art-spark spark-two">✦</div>
+            </div>
+        </section>
+
+        <section class="workspace" aria-label="Administración de productos">
+            <section class="panel form-panel" aria-labelledby="register-title">
+                <div class="panel-heading">
+                    <div class="heading-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="section-kicker">NUEVO REGISTRO</p>
+                        <h2 id="register-title">Agregar producto</h2>
+                    </div>
+                </div>
+
+                <div class="form-fields">
+                    <div class="field">
+                        <label for="productName">Nombre del producto</label>
+                        <input id="productName" type="text" placeholder="Ej. Teclado inalámbrico" autocomplete="off">
+                    </div>
+                    <div class="field">
+                        <label for="productQty">Cantidad disponible</label>
+                        <input id="productQty" type="number" min="1" value="1">
+                    </div>
+                    <button id="addProductBtn" type="button">
+                        <span>Registrar producto</span>
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <path d="M4 10h12m-5-5 5 5-5 5" />
+                        </svg>
+                    </button>
+                    <p id="message" class="message" aria-live="polite"></p>
+                </div>
+                <div class="form-note">
+                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <circle cx="10" cy="10" r="7.25" />
+                        <path d="M10 9v4m0-6h.01" />
+                    </svg>
+                    Los campos son necesarios para registrar un producto.
+                </div>
+            </section>
+
+            <section class="panel inventory-panel" aria-labelledby="inventory-title">
+                <div class="inventory-heading">
+                    <div>
+                        <p class="section-kicker">VISTA GENERAL</p>
+                        <h2 id="inventory-title">Inventario de productos</h2>
+                    </div>
+                    <span class="inventory-tag"><span class="online-dot"></span> En seguimiento</span>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad disponible</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productTableBody"></tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <span class="footer-mark" aria-hidden="true"></span>
+                    <span>Los cambios se reflejan al instante</span>
+                </div>
+            </section>
+        </section>
+
+        <footer class="page-footer">
+            <span>STOCKROOM <span class="footer-divider">/</span> GESTIÓN SIMPLE, CONTROL TOTAL</span>
+            <span>Tu inventario, en buenas manos.</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> origin/albanys
